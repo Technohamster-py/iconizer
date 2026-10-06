@@ -1,0 +1,10 @@
+<!-- source: https://www.svgrepo.com/collection/isometric-3d-interface-icons/ -->
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/folder.svg</file>
+        <file>icons/documents.svg</file>
+        <file>icons/games.svg</file>
+        <file>icons/music.svg</file>
+        <file>icons/pictures.svg</file>
+    </qresource>
+</RCC>
