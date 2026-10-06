@@ -1,9 +1,7 @@
 #include "iconmodel.h"
 
-IconModel::IconModel(QObject* parent)
-    : QAbstractListModel(parent)
-{
-    // Встроенные иконки входят в ресурсы приложения.
+IconModel::IconModel(QObject *parent)
+    : QAbstractListModel(parent) {
     m_icons = {
         {
             QStringLiteral("Папка"),
@@ -33,8 +31,7 @@ IconModel::IconModel(QObject* parent)
     };
 }
 
-int IconModel::rowCount(const QModelIndex& parent) const
-{
+int IconModel::rowCount(const QModelIndex &parent) const {
     // У списка нет дочерних элементов.
     if (parent.isValid())
         return 0;
@@ -42,12 +39,11 @@ int IconModel::rowCount(const QModelIndex& parent) const
     return m_icons.size();
 }
 
-QVariant IconModel::data(const QModelIndex& index, int role) const
-{
+QVariant IconModel::data(const QModelIndex &index, int role) const {
     if (!index.isValid() || index.row() < 0 || index.row() >= m_icons.size())
         return {};
 
-    const Icon& icon = m_icons.at(index.row());
+    const Icon &icon = m_icons.at(index.row());
 
     switch (role) {
         case NameRole:
@@ -64,8 +60,7 @@ QVariant IconModel::data(const QModelIndex& index, int role) const
     }
 }
 
-QHash<int, QByteArray> IconModel::roleNames() const
-{
+QHash<int, QByteArray> IconModel::roleNames() const {
     return {
         {NameRole, "name"},
         {SourceRole, "source"},
@@ -73,8 +68,7 @@ QHash<int, QByteArray> IconModel::roleNames() const
     };
 }
 
-void IconModel::addIcon(const Icon& icon)
-{
+void IconModel::addIcon(const Icon &icon) {
     const int row = m_icons.size();
 
     beginInsertRows(QModelIndex(), row, row);

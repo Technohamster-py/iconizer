@@ -2,19 +2,16 @@
 
 #include "iconmodel.h"
 
-IconFilterModel::IconFilterModel(QObject* parent)
-    : QSortFilterProxyModel(parent)
-{
+IconFilterModel::IconFilterModel(QObject *parent)
+    : QSortFilterProxyModel(parent) {
     setDynamicSortFilter(true);
 }
 
-bool IconFilterModel::builtin() const
-{
+bool IconFilterModel::builtin() const {
     return m_builtin;
 }
 
-void IconFilterModel::setBuiltin(bool builtin)
-{
+void IconFilterModel::setBuiltin(bool builtin) {
     if (m_builtin == builtin)
         return;
 
@@ -25,8 +22,7 @@ void IconFilterModel::setBuiltin(bool builtin)
 
 bool IconFilterModel::filterAcceptsRow(
     int sourceRow,
-    const QModelIndex& sourceParent) const
-{
+    const QModelIndex &sourceParent) const {
     const QModelIndex index = sourceModel()->index(sourceRow, 0, sourceParent);
 
     return index.data(IconModel::BuiltinRole).toBool() == m_builtin;

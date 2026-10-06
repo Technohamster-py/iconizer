@@ -24,8 +24,10 @@ qt_standard_project_setup(REQUIRES 6.11)
 # ---------------------------------------------------------------------------
 
 qt_add_library(IconizerCore STATIC
-        src/models/iconmodel.h          src/models/iconmodel.cpp
-        src/models/iconfiltermodel.h    src/models/iconfiltermodel.cpp
+        src/models/iconmodel.h              src/models/iconmodel.cpp
+        src/models/iconfiltermodel.h        src/models/iconfiltermodel.cpp
+        src/services/foldericoninstaller.h  src/services/foldericoninstaller.cpp
+
 )
 
 target_link_libraries(IconizerCore
