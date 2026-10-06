@@ -7,7 +7,6 @@ ColumnLayout {
 
     spacing: 24
 
-    // Модель передается из Main.qml.
     required property var iconModel
 
     Label {
