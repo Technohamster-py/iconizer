@@ -4,6 +4,7 @@
 
 #include "models/iconmodel.h"
 #include "models/iconfiltermodel.h"
+#include "services/foldericoninstaller.h"
 
 int main(int argc, char* argv[])
 {
@@ -20,6 +21,9 @@ int main(int argc, char* argv[])
     IconFilterModel userIcons;
     userIcons.setSourceModel(&iconModel);
     userIcons.setBuiltin(false);
+
+    FolderIconInstaller folderIconInstaller;
+    engine.rootContext()->setContextProperty(QStringLiteral("folderIconInstaller"), &folderIconInstaller);
 
     engine.rootContext()->setContextProperty(QStringLiteral("builtinIcons"), &builtinIcons);
     engine.rootContext()->setContextProperty(QStringLiteral("userIcons"), &userIcons);

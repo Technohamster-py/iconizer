@@ -15,6 +15,7 @@ find_package(Qt6 REQUIRED COMPONENTS
         Qml
         Quick
         QuickControls2
+        Svg
 )
 
 qt_standard_project_setup(REQUIRES 6.11)
@@ -37,6 +38,7 @@ target_link_libraries(IconizerCore
         Qt6::Qml
         Qt6::Quick
         Qt6::QuickControls2
+        Qt6::Svg
 )
 
 target_include_directories(IconizerCore PUBLIC
