@@ -78,11 +78,11 @@ qt_add_qml_module(IconizerCore
         qml/views/IconLibrary.qml
 
         RESOURCES
-        resources/icons/folder.svg
-        resources/icons/documents.svg
-        resources/icons/games.svg
-        resources/icons/music.svg
-        resources/icons/pictures.svg
+        assets/folder.svg
+        assets/documents.svg
+        assets/games.svg
+        assets/music.svg
+        assets/pictures.svg
 )
 
 # ---------------------------------------------------------------------------

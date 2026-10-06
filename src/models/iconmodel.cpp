@@ -7,27 +7,27 @@ IconModel::IconModel(QObject* parent)
     m_icons = {
         {
             QStringLiteral("Папка"),
-            QStringLiteral("qrc:/icons/folder.svg"),
+            QStringLiteral("qrc:/qt/qml/Iconizer/assets/folder.svg"),
             true
         },
         {
             QStringLiteral("Документы"),
-            QStringLiteral("qrc:/icons/documents.svg"),
+            QStringLiteral("qrc:/qt/qml/Iconizer/assets/documents.svg"),
             true
         },
         {
             QStringLiteral("Игры"),
-            QStringLiteral("qrc:/icons/games.svg"),
+            QStringLiteral("qrc:/qt/qml/Iconizer/assets/games.svg"),
             true
         },
         {
             QStringLiteral("Музыка"),
-            QStringLiteral("qrc:/icons/music.svg"),
+            QStringLiteral("qrc:/qt/qml/Iconizer/assets/music.svg"),
             true
         },
         {
             QStringLiteral("Изображения"),
-            QStringLiteral("qrc:/icons/pictures.svg"),
+            QStringLiteral("qrc:/qt/qml/Iconizer/assets/pictures.svg"),
             true
         }
     };
