@@ -12,7 +12,5 @@ ApplicationWindow {
     IconLibrary {
         anchors.fill: parent
         anchors.margins: 20
-
-        iconModel: icons
     }
 }

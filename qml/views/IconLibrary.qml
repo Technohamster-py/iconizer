@@ -7,8 +7,6 @@ ColumnLayout {
 
     spacing: 24
 
-    required property var iconModel
-
     Label {
         text: qsTr("Иконки")
         font.pixelSize: 20
@@ -23,8 +21,7 @@ ColumnLayout {
 
     IconGrid {
         Layout.fillWidth: true
-        model: root.iconModel
-        builtinOnly: true
+        model: builtinIcons
     }
 
     Label {
@@ -32,12 +29,13 @@ ColumnLayout {
         font.pixelSize: 18
         font.bold: true
 
-        visible: root.iconModel.count > 0
+        visible: userIcons.count > 0
     }
 
     IconGrid {
         Layout.fillWidth: true
-        model: root.iconModel
-        builtinOnly: false
+        model: userIcons
+
+        visible: userIcons.count > 0
     }
 }
